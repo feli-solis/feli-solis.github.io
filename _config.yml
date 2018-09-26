@@ -1,0 +1,23 @@
+title: Luis Felipe Solís
+email: solislf@gmail.com
+url: https://luisfelipesolis.com
+
+
+keep_files:
+  # Keep ./_site/CNAME file for github pages
+  - 'CNAME'
+  # Keep the styles, scripts because gulp builds them before building the jekyll site
+  - 'assets'
+
+# Social
+github_url: https://github.com/feli-solis
+
+# Excludes
+exclude:
+  - gulpfile.js
+  - package-lock.json
+  - package.json
+  - node_modules
+  # Not really needed. Jekyll ignores directories that begin with underscore
+  - _assets
+  
