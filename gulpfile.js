@@ -87,5 +87,10 @@ function watch() {
 // Build and serve
 gulp.task('buildAndServe', gulp.series(processJs, processCss, build, gulp.parallel(serve, watch)));
 
+function deploy() {
+    return gulp.src("./_site/**/*")
+    .pipe(ghPages());
+}
+
 // Deploy
-gulp.task('deploy', () => src('./_site/**/*').pipe(ghPages()));
+gulp.task('deploy', gulp.series(deploy));
