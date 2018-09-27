@@ -84,6 +84,9 @@ function watch() {
 
 // gulp.task('copyAssets', gulp.series(copyAssets));
 
+// Build
+gulp.task('build', build);
+
 // Build and serve
 gulp.task('buildAndServe', gulp.series(processJs, processCss, build, gulp.parallel(serve, watch)));
 
