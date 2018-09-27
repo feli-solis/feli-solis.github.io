@@ -84,12 +84,13 @@ function browserSyncReload(done) {
 function watch() {
     gulp.watch('./_assets/scss/**/*.scss', processCss);
     gulp.watch("./_assets/js/**/*.js", processJs);
+    gulp.watch(['**/*.+(html|md|markdown|MD)', '!_site/**/*.*'], gulp.series(build, browserSyncReload));
 }
 
 // gulp.task('copyAssets', gulp.series(copyAssets));
 
 // Build
-gulp.task('build', build);
+//gulp.task('build', gulp.series(build, browserSyncReload));
 
 // Build and serve
 gulp.task('buildAndServe', gulp.series(processJs, processCss, build, gulp.parallel(serve, watch)));
