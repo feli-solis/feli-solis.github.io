@@ -92,7 +92,10 @@ gulp.task('buildAndServe', gulp.series(processJs, processCss, build, gulp.parall
 
 function deploy() {
     return gulp.src("./_site/**/*")
-    .pipe(ghPages());
+    .pipe(ghPages({
+        remoteUrl: 'https://github.com/feli-solis/feli-solis.github.io.git',
+        branch: 'master' 
+    }));
 }
 
 // Deploy
