@@ -38,6 +38,8 @@ function processJs() {
         .pipe(concat(('app.js')))
         .pipe(uglify())
         .pipe(gulp.dest('./_site/assets/js/'))
+        // Compile files into both _site/assets (for local testing) and assets (for future jekyll builds)
+        .pipe(gulp.dest('./assets/js/'))
         .pipe(browserSync.stream());
 }
 
@@ -51,6 +53,8 @@ function processCss() {
         autoprefixer({browsers: browsers}),
         cssnano()]))
     .pipe(gulp.dest('./_site/assets/css/'))
+    // Compile files into both _site/assets (for local testing) and assets (for future jekyll builds)
+    .pipe(gulp.dest('./assets/css/'))
     .pipe(browserSync.stream());
 }
 
