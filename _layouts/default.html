@@ -1,0 +1,20 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    
+    {% include head.html %}
+
+  <body>
+
+    <!-- Header Nav -->
+    {% include header.html %}
+
+    <div class="content">
+      {{ content }}
+    </div>
+    
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <script src="{{ 'assets/js/app.js' | relative_url }}"></script>
+  </body>
+</html>
