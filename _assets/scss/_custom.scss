@@ -1,5 +1,5 @@
 body {
-    margin: 3rem;
+    margin: 3rem 0.5rem;
     background: $white;
     font-family: $titillium;
 }
@@ -59,9 +59,12 @@ h2 {
 }
 
 .content {
-
     // Only affects large screens and up
      @include breakpoint(large) {
-        margin: 0 10rem;
+        margin: 0 5rem;
      }
+
+     // This rule is mainly for the alignment of the images in the main gallery
+     // Still debating if it should be here. I think everything looks fine centered.
+     text-align: center;
 }
