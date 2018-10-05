@@ -2,6 +2,8 @@ title: Luis Felipe Solís
 email: solislf@gmail.com
 url: https://luisfelipesolis.com
 
+# Generate permalinks for all of the pages of the form '/page_title/'
+permalink: /:title/
 
 keep_files:
   # Keep ./_site/CNAME file for github pages
