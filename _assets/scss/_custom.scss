@@ -59,9 +59,12 @@ h2 {
 }
 
 .content {
+    margin-bottom: 3rem;
+
     // Only affects large screens and up
      @include breakpoint(large) {
-        margin: 0 5rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
      }
 
      // This rule is mainly for the alignment of the images in the main gallery
