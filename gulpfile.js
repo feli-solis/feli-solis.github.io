@@ -8,7 +8,6 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
-const ghPages = require('gulp-gh-pages');
 
 const sassPaths = [
     'node_modules/foundation-sites/scss',
@@ -94,14 +93,3 @@ function watch() {
 
 // Build and serve
 gulp.task('buildAndServe', gulp.series(processJs, processCss, build, gulp.parallel(serve, watch)));
-
-function deploy() {
-    return gulp.src("./_site/**/*")
-    .pipe(ghPages({
-        remoteUrl: 'https://github.com/feli-solis/feli-solis.github.io.git',
-        branch: 'master' 
-    }));
-}
-
-// Deploy
-gulp.task('deploy', gulp.series(deploy));
